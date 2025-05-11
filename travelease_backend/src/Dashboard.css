@@ -1,0 +1,411 @@
+/* Root dashboard layout */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #dbe9f4, #fef9f4);
+  color: #2a2a2a;
+}
+
+/* Header bar */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo image */
+.logo {
+  width: 50px;
+  height: auto;
+  margin-right: 15px;
+}
+
+/* Travel Ease text */
+.logotext {
+  font-size: 26px;
+  font-weight: 700;
+  font-family: 'Pacifico', cursive;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logotext span {
+  color: #ffda77;
+}
+
+/* Logout icon */
+.logout {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-right: 15px;
+}
+
+.logout:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Full name label */
+.header label {
+  font-weight: 500;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+/* Menu and outlet area */
+.menu {
+  width: 260px;
+  position: fixed;
+  top: 70px;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+
+/* Main outlet content */
+.outlet {
+  margin-left: 260px;
+  padding: 30px;
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  } 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+  .outlet {
+    margin-left: 0;
+    padding: 20px;
+  }
+  .logotext {
+    font-size: 20px;
+  }
+  .header label {
+    display: none;
+  }
+}
+/* Outlet Section */
+.outlet {
+  margin-left: 250px;
+  padding: 40px;
+  background: linear-gradient(to right, #ffffff, #f4f4f4);
+  backdrop-filter: blur(8px);
+  min-height: 100vh;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* Travel Body Section */
+.travel-body .container {
+  padding: 0 15px;
+}
+
+.travel-body .text-center {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Heading Styles */
+.travel-body h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+.travel-body p {
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 40px;
+}
+
+/* Travel Service Cards */
+.travel-body .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.travel-body .card-body {
+  padding: 20px;
+}
+
+.travel-body .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Styles */
+.travel-body .display-4 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.travel-body .card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effects for Cards */
+.travel-body .card:hover .display-4 {
+  color: #ff6600;
+}
+
+.travel-body .card:hover .card-title {
+  color: #ff6600;
+}
+
+/* Grid Layout */
+.travel-body .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.travel-body .col-6 {
+  width: 50%;
+}
+
+.travel-body .col-md-3 {
+  width: 23%;
+}
+
+@media (max-width: 768px) {
+  .travel-body .col-6,
+  .travel-body .col-md-3 {
+    width: 100%;
+  }
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 768px) {
+  .outlet {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .travel-body h2 {
+    font-size: 2rem;
+  }
+
+  .travel-body p {
+    font-size: 1rem;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .travel-body .display-4 {
+    font-size: 2.5rem;
+  }
+}
+
+
+/* Booking Form Container */
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Heading */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0077b6;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Select and Input Styles */
+select,
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease;
+}
+
+select:focus,
+input[type="date"]:focus {
+  border-color: #0077b6;
+  outline: none;
+}
+
+/* Submit Button */
+button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005f8d;
+}
+
+/* Results Section */
+.results {
+  margin-top: 30px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.results p {
+  text-align: center;
+  color: #777;
+}
+
+/* Option Cards */
+.option-card {
+  background-color: #ffffff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.option-card strong {
+  font-size: 1.2rem;
+  color: #0077b6;
+}
+
+.option-card button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.option-card button:hover {
+  background-color: #e65c00;
+}
+/* Container for the content */
+#content {
+  background-color: #f0f4f8;
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 1200px;
+  width: 90%;
+}
+
+/* Style for the main heading text */
+.text1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase;
+}
+
+/* Style for the subtitle text (empty or customizable) */
+.text2 {
+  font-size: 18px;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Style for the secondary heading text */
+.text3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #34495e;
+  margin-bottom: 40px;
+  font-family: 'Arial', sans-serif;
+  text-transform: capitalize;
+}
+
+/* Style for the image of the booking train */
+#content img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 18px;
+  margin-top: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Add responsive design for smaller screens */
+@media (max-width: 768px) {
+  .text1 {
+    font-size: 28px;
+  }
+
+  .text3 {
+    font-size: 20px;
+  }
+
+  #content {
+    padding: 30px 15px;
+  }
+}
